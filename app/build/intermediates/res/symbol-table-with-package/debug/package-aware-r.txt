@@ -785,8 +785,10 @@ id alertTitle
 id always
 id async
 id auto
+id back
 id barrier
 id beginning
+id belly
 id blocking
 id bottom
 id buttonPanel
@@ -812,11 +814,13 @@ id email
 id end
 id expand_activities_button
 id expanded_menu
+id eyes
 id forever
 id fullname
 id gone
 id group_divider
 id groups
+id head
 id home
 id homeAsUp
 id icon
@@ -885,6 +889,7 @@ id standard
 id start
 id submenuarrow
 id submit_area
+id t
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -901,6 +906,7 @@ id textSpacerNoTitle
 id textView2
 id textView3
 id textView4
+id textView5
 id textView8
 id time
 id title
