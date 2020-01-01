@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Head extends AppCompatActivity {
@@ -30,12 +31,13 @@ public class Head extends AppCompatActivity {
         new FirebaseDatabasehelper().getMedical(new FirebaseDatabasehelper.DataStatus() {
             @Override
             public void DataisLoaded(List<Medical> medicals, List<String> keys) {
+                List<Medical>med = new ArrayList<>();
                 for (Medical m : medicals){
-                    if (m.getCategory() != 1 ){
-                        medicals.remove(m);
+                    if (m.getCategory() == 1 ){
+                        med.add(m);
                     }
                 }
-                new RecyclerView_Config().setConfig(mRecyclerView, Head.this, medicals,keys);
+                new RecyclerView_Config().setConfig(mRecyclerView, Head.this, med,keys);
             }
 
             @Override

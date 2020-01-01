@@ -11,9 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GetDesc"
-            android:theme="@style/AppTheme.CustomTheme"
-            ></activity>
+        <activity android:name=".Belly"></activity>
+        <activity android:name=".Throat" />
+        <activity android:name=".Back" />
+        <activity android:name=".eyes" />
+        <activity
+            android:name=".GetDesc"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".Head" />
         <activity android:name=".Register">
             <intent-filter>

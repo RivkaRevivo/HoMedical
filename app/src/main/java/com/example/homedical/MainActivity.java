@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button head;
     Button belly;
     Button back;
-    Button thorat;
+    Button throat;
     Button eyes;
 
     @Override
@@ -27,20 +27,40 @@ public class MainActivity extends AppCompatActivity {
         head = (Button)findViewById(R.id.head);
         belly = (Button)findViewById(R.id.belly);
         back = (Button)findViewById(R.id.back);
-        thorat = (Button)findViewById(R.id.t);
+        throat = (Button)findViewById(R.id.t);
         eyes = (Button)findViewById(R.id.eyes);
 
         head.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),Head.class));
+
             }
         });
-//        belly.setOnClickListener((View.OnClickListener) this);
-//        back.setOnClickListener((View.OnClickListener) this);
-//        thorat.setOnClickListener((View.OnClickListener) this);
-//        eyes.setOnClickListener((View.OnClickListener) this);
-
+        eyes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),eyes.class));
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Back.class));
+            }
+        });
+        belly.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Belly.class));
+            }
+        });
+        throat.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Throat.class));
+            }
+        });
 
     }
 
