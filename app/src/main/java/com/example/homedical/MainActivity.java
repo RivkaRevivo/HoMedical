@@ -29,7 +29,13 @@ public class MainActivity extends AppCompatActivity {
         back = (Button)findViewById(R.id.back);
         thorat = (Button)findViewById(R.id.t);
         eyes = (Button)findViewById(R.id.eyes);
-//        head.setOnClickListener((View.OnClickListener) this);
+
+        head.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Head.class));
+            }
+        });
 //        belly.setOnClickListener((View.OnClickListener) this);
 //        back.setOnClickListener((View.OnClickListener) this);
 //        thorat.setOnClickListener((View.OnClickListener) this);
@@ -53,5 +59,8 @@ public class MainActivity extends AppCompatActivity {
            startActivity(new Intent(MainActivity.this , Login.class));
         }
     }
+
+
+
 
 }
