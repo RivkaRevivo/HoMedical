@@ -1,16 +1,19 @@
 package com.example.homedical;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.homedical.Medical;
-import com.example.homedical.R;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -28,20 +31,30 @@ public class RecyclerView_Config {
     class MedicalitemView extends RecyclerView.ViewHolder {
         private TextView mProblem;
         private TextView mName;
-
+        private Button get;
         private String key;
 
         public MedicalitemView(ViewGroup parent){
             super(LayoutInflater.from(mContext).inflate(R.layout.medical_list_item,parent ,false));
             mProblem = (TextView) itemView.findViewById(R.id.problem_textview);
             mName = (TextView) itemView.findViewById(R.id.name_textview);
+            get = (Button)itemView.findViewById(R.id.buttonget);
 
         }
 
-        public void bind(Medical medical, String key){
+        public void bind(final Medical medical, String key) {
             mProblem.setText(medical.getProblem());
             mName.setText(medical.getName());
             this.key = key;
+
+            get.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, GetDesc.class);
+                    intent.putExtra("desc", medical.getDesc());
+                    mContext.startActivity(intent);
+                }
+            });
         }
     }
 
@@ -69,5 +82,7 @@ public class RecyclerView_Config {
         public int getItemCount() {
             return mMedicalList.size();
         }
+
+
     }
 }

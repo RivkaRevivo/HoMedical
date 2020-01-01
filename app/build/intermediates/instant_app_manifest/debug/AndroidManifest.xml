@@ -28,6 +28,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.homedical.GetDesc"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name="com.example.homedical.Head" />
         <activity android:name="com.example.homedical.Register" >
             <intent-filter>

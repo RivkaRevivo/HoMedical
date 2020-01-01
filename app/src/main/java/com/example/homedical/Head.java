@@ -3,6 +3,7 @@ package com.example.homedical;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ import java.util.List;
 public class Head extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
+    Button get;
 
 
 
@@ -24,9 +26,15 @@ public class Head extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_head);
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclehead);
+        get = findViewById(R.id.buttonget);
         new FirebaseDatabasehelper().getMedical(new FirebaseDatabasehelper.DataStatus() {
             @Override
             public void DataisLoaded(List<Medical> medicals, List<String> keys) {
+                for (Medical m : medicals){
+                    if (m.getCategory() != 1 ){
+                        medicals.remove(m);
+                    }
+                }
                 new RecyclerView_Config().setConfig(mRecyclerView, Head.this, medicals,keys);
             }
 
