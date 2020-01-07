@@ -13,18 +13,15 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_accessibility_black_24dp"
             android:title="Profile" />
+        <item
+            android:id="@+id/feavorets"
+            android:icon="@drawable/ic_accessibility_black_24dp"
+            android:title="F" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_accessibility_black_24dp"
+            android:title="Log Out" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_add_to_photos_black_24dp"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_add_to_photos_black_24dp"
-                android:title="Send" />
-        </menu>
-    </item>
+
 </menu>

@@ -1268,6 +1268,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id eyes
+id feavorets
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1300,6 +1301,7 @@ id line3
 id listMode
 id list_item
 id login
+id logout
 id masked
 id media_actions
 id message
@@ -1310,11 +1312,9 @@ id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
 id name_textview
-id nav_chat
 id nav_controller_view_tag
 id nav_gallery
 id nav_home
-id nav_message
 id nav_profile
 id nav_send
 id nav_share

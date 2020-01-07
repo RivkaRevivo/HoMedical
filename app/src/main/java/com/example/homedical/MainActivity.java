@@ -77,7 +77,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            //case R.id.personal
+
+
+            case R.id.nav_profile:
+
+            case R.id.feavorets:
+            case R.id.logout:
         }
         return super.onOptionsItemSelected(item);
     }
